@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.36602.29
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityLessionSelectionSystem", "UniversityLessionSelectionSystem\UniversityLessionSelectionSystem.csproj", "{EC73E6A8-EBF6-47DF-B8CE-F4C3B969E4B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityLessionSelectionSystem.Tests", "UniversityLessionSelectionSystem.Tests\UniversityLessionSelectionSystem.Tests.csproj", "{19DEFE67-55A8-472F-BD85-0D664DD69AFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC73E6A8-EBF6-47DF-B8CE-F4C3B969E4B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC73E6A8-EBF6-47DF-B8CE-F4C3B969E4B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC73E6A8-EBF6-47DF-B8CE-F4C3B969E4B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC73E6A8-EBF6-47DF-B8CE-F4C3B969E4B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19DEFE67-55A8-472F-BD85-0D664DD69AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19DEFE67-55A8-472F-BD85-0D664DD69AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19DEFE67-55A8-472F-BD85-0D664DD69AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19DEFE67-55A8-472F-BD85-0D664DD69AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

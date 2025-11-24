@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.4.3.1\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.4.3.1\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.13.3\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.13.3\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC73E6A8-EBF6-47DF-B8CE-F4C3B969E4B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UniversityLessionSelectionSystem</RootNamespace>
+    <AssemblyName>UniversityLessionSelectionSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.13.3.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.13.3\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\AcademicStandingDecision\AcademicStandingContext.cs" />
+    <Compile Include="Domain\AcademicStandingDecision\AcademicStandingDecision.cs" />
+    <Compile Include="Domain\AccessPolicy\AccessDecision.cs" />
+    <Compile Include="Domain\AccessPolicy\AccessRequest.cs" />
+    <Compile Include="Domain\AccessPolicy\InMemoryAccessPolicyRepo.cs" />
+    <Compile Include="Domain\AdvisorApproval\ApprovalRequest.cs" />
+    <Compile Include="Domain\AdvisorApproval\InMemoryApprovalGateway.cs" />
+    <Compile Include="Domain\AdvisorApproval\WorkflowSnapshot.cs" />
+    <Compile Include="Domain\AttendanceAnomalyDetector\AttendanceAnomalyResult.cs" />
+    <Compile Include="Domain\AttendanceAnomalyDetector\AttendanceContext.cs" />
+    <Compile Include="Domain\AttendanceAnomalyDetector\AttendanceLog.cs" />
+    <Compile Include="Domain\AttendanceAnomalyDetector\StudentProfile.cs" />
+    <Compile Include="Domain\CapacityWaitlistAllocator\AllocationPlan.cs" />
+    <Compile Include="Domain\CapacityWaitlistAllocator\WaitlistEntry.cs" />
+    <Compile Include="Domain\DegreeProgress\CompletedCourseInfo.cs" />
+    <Compile Include="Domain\DegreeProgress\DegreeProgressContext.cs" />
+    <Compile Include="Domain\DegreeProgress\DegreeProgressReport.cs" />
+    <Compile Include="Domain\EnrollmentEligibility\Course.cs" />
+    <Compile Include="Domain\EnrollmentEligibility\EligibilityDecision.cs" />
+    <Compile Include="Domain\EnrollmentEligibility\InMemoryCourseRepo.cs" />
+    <Compile Include="Domain\EnrollmentEligibility\InMemoryStudentRepo.cs" />
+    <Compile Include="Domain\EnrollmentEligibility\ScheduleSlot.cs" />
+    <Compile Include="Domain\EnrollmentEligibility\Section.cs" />
+    <Compile Include="Domain\EnrollmentEligibility\Student.cs" />
+    <Compile Include="Domain\EnrollmentEligibility\Term.cs" />
+    <Compile Include="Domain\Enums\Enums.cs" />
+    <Compile Include="Domain\ExamScheduling\ExamPlacement.cs" />
+    <Compile Include="Domain\ExamScheduling\ExamRequest.cs" />
+    <Compile Include="Domain\ExamScheduling\ExamRoom.cs" />
+    <Compile Include="Domain\ExamScheduling\ExamSchedule.cs" />
+    <Compile Include="Domain\ExamScheduling\ExamWindow.cs" />
+    <Compile Include="Domain\ExamScheduling\InMemoryCalendarGateway.cs" />
+    <Compile Include="Domain\ExamScheduling\InMemoryCampusMapGateway.cs" />
+    <Compile Include="Domain\ExamScheduling\InMemoryExamPolicyRepo.cs" />
+    <Compile Include="Domain\FeeAndInvoice\FeeContext.cs" />
+    <Compile Include="Domain\FeeAndInvoice\InMemoryFeeCatalogRepo.cs" />
+    <Compile Include="Domain\FeeAndInvoice\InMemoryFinanceRepo.cs" />
+    <Compile Include="Domain\FeeAndInvoice\InvoiceItem.cs" />
+    <Compile Include="Domain\FeeAndInvoice\InvoiceSummary.cs" />
+    <Compile Include="Domain\GradingPolicy\GradeChangeRecord.cs" />
+    <Compile Include="Domain\GradingPolicy\GradingAuditContext.cs" />
+    <Compile Include="Domain\GradingPolicy\GradingAuditResult.cs" />
+    <Compile Include="Domain\GradingPolicy\InMemoryGradingPolicyRepo.cs" />
+    <Compile Include="Domain\GradingPolicy\RetakeRecord.cs" />
+    <Compile Include="Domain\GradingPolicy\SpecialMarkRecord.cs" />
+    <Compile Include="Domain\Logging\ConsoleLogger.cs" />
+    <Compile Include="Domain\NotificationPolicy\InMemoryNotificationGateway.cs" />
+    <Compile Include="Domain\NotificationPolicy\NotificationContext.cs" />
+    <Compile Include="Domain\NotificationPolicy\NotificationDecision.cs" />
+    <Compile Include="Domain\NotificationPolicy\NotificationPlan.cs" />
+    <Compile Include="Domain\NotificationPolicy\SentNotification.cs" />
+    <Compile Include="Domain\Plagiarism\CategoryAggregate.cs" />
+    <Compile Include="Domain\Plagiarism\EngineAllowance.cs" />
+    <Compile Include="Domain\Plagiarism\EngineScore.cs" />
+    <Compile Include="Domain\Plagiarism\FakePlagiarismGateway.cs" />
+    <Compile Include="Domain\Plagiarism\InMemoryPlagiarismPolicyRepo.cs" />
+    <Compile Include="Domain\Plagiarism\PlagiarismContext.cs" />
+    <Compile Include="Domain\Plagiarism\PlagiarismDecision.cs" />
+    <Compile Include="Domain\Plagiarism\PlagiarismHistory.cs" />
+    <Compile Include="Domain\PrerequisiteEvaluation\EquivalentCourse.cs" />
+    <Compile Include="Domain\PrerequisiteEvaluation\InMemoryEquivalencyRepo.cs" />
+    <Compile Include="Domain\PrerequisiteEvaluation\PrereqDecision.cs" />
+    <Compile Include="Domain\PrerequisiteEvaluation\PrereqPolicyHints.cs" />
+    <Compile Include="Domain\RegistrationWindowThrottle\RegistrationThrottleContext.cs" />
+    <Compile Include="Domain\RegistrationWindowThrottle\RegistrationThrottleDecision.cs" />
+    <Compile Include="Domain\SampleProgramPlanner\DegreeMap.cs" />
+    <Compile Include="Domain\SampleProgramPlanner\ProgramPlan.cs" />
+    <Compile Include="Domain\ScheduleConflictResolve\ConflictItem.cs" />
+    <Compile Include="Domain\ScheduleConflictResolve\ConflictReport.cs" />
+    <Compile Include="Domain\ScholarshipEligibilityEngine\ScholarshipContext.cs" />
+    <Compile Include="Domain\ScholarshipEligibilityEngine\ScholarshipDecision.cs" />
+    <Compile Include="Domain\SLAAndHealthMonitor\Alert.cs" />
+    <Compile Include="Domain\SLAAndHealthMonitor\DependencySnapshot.cs" />
+    <Compile Include="Domain\SLAAndHealthMonitor\HealthReport.cs" />
+    <Compile Include="Domain\SLAAndHealthMonitor\InMemoryAlertGateway.cs" />
+    <Compile Include="Domain\SLAAndHealthMonitor\MutePolicy.cs" />
+    <Compile Include="Domain\SLAAndHealthMonitor\OpsSnapshot.cs" />
+    <Compile Include="Domain\StudentEngagement\StudentEngagementContext.cs" />
+    <Compile Include="Domain\StudentEngagement\StudentEngagementDecision.cs" />
+    <Compile Include="Interfaces\AccessPolicy\IAccessPolicyRepo.cs" />
+    <Compile Include="Interfaces\AdvisorApproval\IApprovalGateway.cs" />
+    <Compile Include="Interfaces\EnrollmentEligibility\ICourseRepo.cs" />
+    <Compile Include="Interfaces\EnrollmentEligibility\IStudentRepo.cs" />
+    <Compile Include="Interfaces\ExamScheduling\ICalendarGateway.cs" />
+    <Compile Include="Interfaces\ExamScheduling\ICampusMapGateway.cs" />
+    <Compile Include="Interfaces\ExamScheduling\IExamPolicyRepo.cs" />
+    <Compile Include="Interfaces\FeeAndInvoice\IFeeCatalogRepo.cs" />
+    <Compile Include="Interfaces\GradingPolicy\IGradingPolicyRepo.cs" />
+    <Compile Include="Interfaces\CommonInterfaces.cs" />
+    <Compile Include="Interfaces\NotificationPolicy\INotificationGateway.cs" />
+    <Compile Include="Interfaces\Plagiarism\IPlagiarismGateway.cs" />
+    <Compile Include="Interfaces\Plagiarism\IPlagiarismPolicyRepo.cs" />
+    <Compile Include="Interfaces\PrerequisiteEvaluation\IEquivalencyRepo.cs" />
+    <Compile Include="Interfaces\ScholarshipEligibilityEngine\IFinanceRepo.cs" />
+    <Compile Include="Interfaces\SLAAndHealthMonitor\IAlertGateway.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AcademicStandingRecalculationService.cs" />
+    <Compile Include="Services\AccessPolicyAuthorizationService.cs" />
+    <Compile Include="Services\AdvisorApprovalWorkflowService.cs" />
+    <Compile Include="Services\AttendanceAnomalyDetectorService.cs" />
+    <Compile Include="Services\CapacityWaitlistAllocatorService.cs" />
+    <Compile Include="Services\DegreeProgressAuditService.cs" />
+    <Compile Include="Services\EnrollmentEligibilityService.cs" />
+    <Compile Include="Services\ExamSchedulingOptimizerService.cs" />
+    <Compile Include="Services\FeeAndInvoiceComputationService.cs" />
+    <Compile Include="Services\GradingPolicyAuditService.cs" />
+    <Compile Include="Services\NotificationPolicyEngineService.cs" />
+    <Compile Include="Services\PlagiarismOrchestrationService.cs" />
+    <Compile Include="Services\PrerequisiteEvaluationService.cs" />
+    <Compile Include="Services\RegistrationWindowThrottleService.cs" />
+    <Compile Include="Services\SampleProgramPlannerService.cs" />
+    <Compile Include="Services\ScheduleConflictResolverService.cs" />
+    <Compile Include="Services\ScholarshipEligibilityEngineService.cs" />
+    <Compile Include="Services\SLAAndHealthMonitorService.cs" />
+    <Compile Include="Services\StudentEngagementScoringService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\AttendanceAnomalyDetector\" />
+    <Folder Include="Interfaces\CapacityWaitlistAllocator\" />
+    <Folder Include="Interfaces\SampleProgramPlanner\" />
+    <Folder Include="Interfaces\ScheduleConflictResolve\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.13.3\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.13.3\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.4.3.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.4.3.1\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+</Project>
